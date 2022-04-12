@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "types": ["@types/jest", "@testing-library/jest-dom"]
+  },
+  "setupFilesAfterEnv": ["src/setupTests.tsx"]
+}
