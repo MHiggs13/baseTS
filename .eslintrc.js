@@ -13,12 +13,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: [
-    "react",
-    "@typescript-eslint",
-    "tslint-config-prettier",
-    "prettier",
-  ],
+  plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {},
   overrides: [
     {

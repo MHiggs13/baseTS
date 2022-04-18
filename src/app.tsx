@@ -1,7 +1,13 @@
 import React, { ReactElement } from "react";
+import Home from "pages/home";
 
 const App = (): ReactElement => {
-  return <div>App</div>;
+  return (
+    <div>
+      App
+      <Home />
+    </div>
+  );
 };
 
 export default App;

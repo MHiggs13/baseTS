@@ -1,7 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+// TODO: remove source map before prod
 module.exports = {
+  devtool: "inline-source-map",
   context: path.join(__dirname, "src"),
   entry: {
     main: path.resolve(__dirname, "./src/index.tsx"),
@@ -19,18 +21,25 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(ts|tsx|js)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript",
-            ],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "@babel/preset-env",
+                "@babel/preset-react",
+                "@babel/preset-typescript",
+              ],
+            },
           },
-        },
+          { loader: "ts-loader" },
+        ],
       },
     ],
   },
@@ -42,10 +51,12 @@ module.exports = {
     }),
   ],
   resolve: {
+    aliasFields: ["browser"],
     extensions: [".ts", ".tsx", ".js"],
     modules: [path.join(__dirname, "node_modules")],
     alias: {
       Source$: path.resolve(__dirname, "src/"),
+      pages: path.resolve(__dirname, "./src/pages/"),
     },
   },
 };
