@@ -1,0 +1,49 @@
+{
+  "font-family": "proxima-nova, sans-serif",
+  "font-size-base": "16px",
+
+  "primary-color": "#1F48E7",
+  "text-color": "#ffffff",
+  "border-color-base": "#ccc",
+  "border-radius-base": "1rem",
+  "component-background": "#fff",
+
+  "layout-header-background": "#fff",
+  "layout-header-padding": "0",
+  "layout-header-height": "inherit",
+  "layout-body-background": "#fff",
+
+  "link-color": "#333",
+  "link-hover-color": "#000",
+  "link-active-color": "#000",
+  "link-decoration": "underline",
+  "link-hover-decoration": "underline",
+  "link-focus-decoration": "underline",
+
+  "menu-item-height": "1.375rem",
+  "menu-item-color": "#333",
+  "menu-highlight-color": "#333",
+  "menu-item-active-bg": "transparent",
+
+  "btn-border-radius-base": "1.375rem",
+  "btn-height-base": "2.8rem",
+  "btn-font-weight": "bold",
+
+  "btn-height-lg": "3.5rem",
+
+  "input-height-lg": "44",
+  "input-padding-horizontal-lg": "1rem",
+
+  "input-bg": "fff",
+  "input-border-color": "#757473",
+  "input-hover-border-color": "#757473",
+
+  "card-background": "#fff",
+  "card-padding-base": "2.5rem",
+  "card-radius": "4px",
+
+  "typography-title-font-weight": "bold",
+
+  "@link-color": "rgba(0, 0, 0, 0.65)",
+  "@link-decoration": "underline"
+}

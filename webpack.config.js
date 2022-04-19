@@ -21,10 +21,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-      },
-      {
         test: /\.(ts|tsx|js)$/,
         exclude: /node_modules/,
         use: [
@@ -40,6 +36,10 @@ module.exports = {
           },
           { loader: "ts-loader" },
         ],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
@@ -57,6 +57,7 @@ module.exports = {
     alias: {
       Source$: path.resolve(__dirname, "src/"),
       pages: path.resolve(__dirname, "./src/pages/"),
+      theme: path.resolve(__dirname, "./src/theme/"),
     },
   },
 };

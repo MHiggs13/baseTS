@@ -1,0 +1,40 @@
+body {
+  --color-one: #f3d0c8;
+  --color-two: #f3e5c8;
+  --color-three: #ebf3c8;
+  --color-four: #d6f3c8;
+  --color-five: #c8f3d0;
+  --color-six: #c8f3e6;
+  --color-primary-text: #3d3432;
+}
+
+body {
+  margin: 0;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-primary-text);
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
