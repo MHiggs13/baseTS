@@ -1,15 +1,16 @@
 import React, { ReactElement } from "react";
-import Home from "pages/home";
+import { BrowserRouter } from "react-router-dom";
+import Main from "pages/main";
 import "./app.css";
 import styles from "./styles";
 
 const App = (): ReactElement => {
   return (
-    <div css={styles.app}>
-      App
-      <Home />
-      <p>this is a para</p>
-    </div>
+    <BrowserRouter>
+      <div css={styles.app}>
+        <Main />
+      </div>
+    </BrowserRouter>
   );
 };
 

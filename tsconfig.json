@@ -16,6 +16,7 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "types": ["react", "react-dom", "node", "@emotion/react/types/css-prop"],
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
     "jsxImportSource": "@emotion/react",
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,

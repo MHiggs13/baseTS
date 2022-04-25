@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // TODO: remove source map before prod
 module.exports = {
   devtool: "inline-source-map",
+  devServer: {
+    historyApiFallback: true,
+  },
   context: path.join(__dirname, "src"),
   entry: {
     main: path.resolve(__dirname, "./src/index.tsx"),
@@ -41,6 +44,18 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "svg-url-loader",
+
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -56,6 +71,8 @@ module.exports = {
     modules: [path.join(__dirname, "node_modules")],
     alias: {
       Source$: path.resolve(__dirname, "src/"),
+      assets: path.resolve(__dirname, "./src/assets/"),
+      components: path.resolve(__dirname, "./src/components/"),
       pages: path.resolve(__dirname, "./src/pages/"),
       theme: path.resolve(__dirname, "./src/theme/"),
     },
