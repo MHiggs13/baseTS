@@ -14,8 +14,11 @@ const TopMenu = (): ReactElement => {
       <Link to="/wow" css={styles.navLink}>
         wow
       </Link>
-      <Link to="/placeholder" css={styles.navLink}>
-        placeholder
+      <Link to="/puzzles" css={styles.navLink}>
+        Puzzles
+      </Link>
+      <Link to="/exercise" css={styles.navLink}>
+        Exercise
       </Link>
     </div>
   );
